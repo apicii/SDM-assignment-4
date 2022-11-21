@@ -1,7 +1,7 @@
 # jSicko Tutorials
 
 This repository contains basic tutorials to use jSicko - Java Simple Contract 
-Checker, updated to version `1.0.0-M4`. This version of the tutorials includes a few
+Checker, updated to version `1.0.0`. This version of the tutorials includes a few
 examples related to the support of exceptional behaviors and inherited (weakened) preconditions,
 that are now supported by jSicko.
 
@@ -30,10 +30,12 @@ execution of test cases.
 ## Use with IntelliJ IDEA
 
 To run and play with this tutorial project with IntelliJ IDEA, clone this repository and import it. 
-Most of the maven settings will be imported, except the compiler option that enables the jSicko
-instrumentation. 
+All the required maven settings will be imported, including the ones related to the Java compiler.
 
-To enable it, open the IntelliJ IDEA Preference window, and look for `Builder, Execution, Deployment / Compiler / Java Compiler` on the settings tree. In the bottom of the settings panel, you can add a project-specific option by adding `-Xplugin:JSickoContractCompiler` as a compilation option for the `jSicko-tutorials` module.
+Before running compilation, open the IntelliJ IDEA Preference window, and look for 
+`Builder, Execution, Deployment / Compiler / Java Compiler` on the settings tree. 
+In the bottom of the settings panel, ensure that `-Xplugin:JSickoContractCompiler` and `-parameters`
+are available as a compilation options for the `jSicko-tutorials` module.
 
 
 
