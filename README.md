@@ -1,6 +1,6 @@
 # jSicko Tutorials
 
-This repository contains basic tutorials to use jSicko - Java Simple Contract 
+This repository contains basic tutorials to use jSicko - Java Simple Contract
 Checker, updated to version `1.0.0`. This version of the tutorials includes a few
 examples related to the support of exceptional behaviors and inherited (weakened) preconditions,
 that are now supported by jSicko.
@@ -9,10 +9,13 @@ that are now supported by jSicko.
 
 This repository contains a few classes and tests that show how to use jSicko.
 
-* `ch.usi.si.codelounge.jsicko.tutorials.simple.Collections`, that contains a few static methods boxing Java utility methods for collections;
-* `ch.usi.si.codelounge.jsicko.tutorials.simple.Math`, with a few methods manipulating doubles; 
-* `ch.usi.si.codelounge.jsicko.tutorials.stack`, containing the contract for a `Stack` interface and two implementing classes, `impl.GoodStack` and `impl.BadStack`.
-* `ch.usi.si.codelounge.jsicko.tutorials.inheritance`, containing the contract for an abstract collection, an abstract list, and two classes (`ArrayList` and `HashSet`).
+* `ch.usi.si.codelounge.jsicko.tutorials.simple.Collections`, that contains a few static methods boxing Java utility
+  methods for collections;
+* `ch.usi.si.codelounge.jsicko.tutorials.simple.Math`, with a few methods manipulating doubles;
+* `ch.usi.si.codelounge.jsicko.tutorials.stack`, containing the contract for a `Stack` interface and two implementing
+  classes, `impl.GoodStack` and `impl.BadStack`.
+* `ch.usi.si.codelounge.jsicko.tutorials.inheritance`, containing the contract for an abstract collection, an abstract
+  list, and two classes (`ArrayList` and `HashSet`).
 
 In `src/test`, you will find jUnit 5 tests that exercise a few behaviors of the classes above.
 In most cases, the test exercise normal behavior, exceptional behavior, and some violated preconditions.
@@ -29,13 +32,17 @@ execution of test cases.
 
 ## Use with IntelliJ IDEA
 
-To run and play with this tutorial project with IntelliJ IDEA, clone this repository and import it. 
-All the required maven settings will be imported, including the ones related to the Java compiler.
+To run and play with this tutorial project with IntelliJ IDEA, clone this repository and import it.
+First of all, ensure to compile and run the project with a JDK version 11. If you import the project as a maven project,
+all the required maven settings will be automatically set, including the ones related to the Java compiler.
 
-Before running compilation, open the IntelliJ IDEA Preference window, and look for 
-`Builder, Execution, Deployment / Compiler / Java Compiler` on the settings tree. 
+Before running compilation, open the IntelliJ IDEA Preference window, and look for
+`Builder, Execution, Deployment / Compiler / Java Compiler` on the settings tree.
 In the bottom of the settings panel, ensure that `-Xplugin:JSickoContractCompiler` and `-parameters`
-are available as a compilation options for the `jSicko-tutorials` module.
+are available as a compilation options for the `jSicko-tutorials` module. If for some reasons these settings
+are not available, JSicko will not work. You can either set them manually or right-click on the `pom.xml` file and
+select `Maven->Reload project`.
+
 
 
 
